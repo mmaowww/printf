@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_characters.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 16:02:48 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/01/18 17:33:01 by ebetrix          ###   ########.ch       */
+/*   Created: 2022/01/18 17:06:19 by ebetrix           #+#    #+#             */
+/*   Updated: 2022/01/18 19:46:12 by ebetrix          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <limits.h>
 
-int	main(void)
+int	ft_writechar(char c)
 {
-//	printf("J'imprime des trucs, wesh, style: %c%% %s %d et est-ce que ça continue d'imprimer là?\n", 'd', "et comment il sait qu'il doit aller chercher ici?", 975);
-	//ft_printf("J'imprime des trucs, wesh, style: %c%% %s %d et est-ce que ça continue d'imprimer là?\n", 'd', "et comment il sait qu'il doit aller chercher ici?", 975.56);
-	printf ("%s", NULL);
-	return (0);
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_writestr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}	       
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }

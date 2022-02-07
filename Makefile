@@ -5,18 +5,39 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/12/08 15:25:05 by ebetrix           #+#    #+#              #
-#    Updated: 2021/12/08 20:43:11 by ebetrix          ###   ########.ch        #
+#    Created: 2022/01/31 11:13:17 by ebetrix           #+#    #+#              #
+#    Updated: 2022/02/07 14:42:48 by ebetrix          ###   ########.ch        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+.RECIPEPREFIX = <
+
+NAME = libftprinft.a
+
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+
+CFLAGS = -Wall -Werror -Wextra
+
 RM = rm -f
-SRC = 
 
+SOURCES = ft_characters.c \
+	  ft_numbers.c \
+	  ft_printf.c
 
-OBJ = $(SRC:.c=.o)
+OBJECTS = $(SOURCES:.c=.o)
 
+%.o: %.c
+	< $(CC) -c $(CFLAGS) $(SOURCES) -o $(NAME)
+
+all: $(NAME)
+
+$(NAME): $(OBJECTS)
+	< ar rc $(NAME) $(OBJECTS)
+	< ranlib $(NAME)
+
+clean:
+	$(RM) $(OBJECTS)
+
+fclean: clean
+	$(RM) $(NAME)
 
