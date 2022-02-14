@@ -6,7 +6,7 @@
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 21:09:08 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/02/14 10:51:52 by ebetrix          ###   ########.ch       */
+/*   Updated: 2022/02/14 18:37:40 by ebetrix          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_printf(const char *text, ...)
 {
 	va_list	args;
 	int	i;
-	
+
 	i = 0;
 	va_start(args, text);
 	while (*text)

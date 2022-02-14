@@ -6,7 +6,7 @@
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:40:00 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/02/14 10:40:31 by ebetrix          ###   ########.ch       */
+/*   Updated: 2022/02/14 18:40:41 by ebetrix          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int	ft_writeptr(unsigned long long n)
 	char	c;
 
 	c = 'x';
-	write(1, "0x",2);
+	write(1, "0x", 2);
 	i = 2;
 	i += ft_writehexa(n, c);
 	return (i);

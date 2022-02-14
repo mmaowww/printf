@@ -6,7 +6,7 @@
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:06:19 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/01/18 19:46:12 by ebetrix          ###   ########.ch       */
+/*   Updated: 2022/02/14 18:34:05 by ebetrix          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_writestr(char *str)
 	{
 		write(1, "(null)", 6);
 		return (6);
-	}	       
+	}
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
