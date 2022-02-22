@@ -6,7 +6,7 @@
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:40:00 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/02/14 18:40:41 by ebetrix          ###   ########.ch       */
+/*   Updated: 2022/02/22 17:07:56 by ebetrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_writenbr(int n)
 {
-	int	i;
+	int		i;
 	char	c;
 
 	i = 0;
@@ -40,7 +40,7 @@ int	ft_writenbr(int n)
 
 int	ft_writepos(unsigned int n)
 {
-	int	i;
+	int		i;
 	char	c;
 
 	i = 0;
@@ -54,7 +54,7 @@ int	ft_writepos(unsigned int n)
 
 int	ft_writehexa(unsigned long long n, const char text)
 {
-	int	i;
+	int		i;
 	char	c;
 
 	i = 0;
@@ -82,7 +82,7 @@ int	ft_writehexa(unsigned long long n, const char text)
 
 int	ft_writeptr(unsigned long long n)
 {
-	int	i;
+	int		i;
 	char	c;
 
 	c = 'x';

@@ -6,7 +6,7 @@
 /*   By: ebetrix <ebetrix@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 21:09:08 by ebetrix           #+#    #+#             */
-/*   Updated: 2022/02/14 18:37:40 by ebetrix          ###   ########.ch       */
+/*   Updated: 2022/02/22 17:19:26 by ebetrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_variable(va_list args, const char text)
 	if (text == 'c')
 		i = ft_writechar(va_arg(args, int));
 	if (text == 's')
-		i = ft_writestr(va_arg(args, char*));
+		i = ft_writestr(va_arg(args, char *));
 	else if (text == 'p')
 		i = ft_writeptr(va_arg(args, unsigned long long));
 	if ((text == 'd') || (text == 'i'))
@@ -40,7 +40,7 @@ int	ft_variable(va_list args, const char text)
 int	ft_printf(const char *text, ...)
 {
 	va_list	args;
-	int	i;
+	int		i;
 
 	i = 0;
 	va_start(args, text);
@@ -71,7 +71,9 @@ int	ft_printf(const char *text, ...)
 	j = LONG_MAX;
 	i = 10;
 	p = &i;
-	printf ("Ma fonction renvoie: %d\n", ft_printf("Je fais un test: %p\n%p\n%x\n", p, i, j));
-	printf("La vraie renvoie: %d\n", printf("Je fais un text: %p\n%p\n%x\n", p, i, j));
+	printf ("Ma fonction renvoie: %d\n",
+		ft_printf("Je fais un test: %p\n%p\n%x\n", p, i, j));
+	printf("La vraie renvoie: %d\n",
+		printf("Je fais un text: %p\n%p\n%x\n", p, i, j));
 	return (0);
 }*/
